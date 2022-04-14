@@ -8,47 +8,46 @@
     android:background="@drawable/background">
 
     <ImageButton
-        android:id="@+id/imageButton"
+        android:id="@+id/connectButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@null"
         android:layout_marginStart="105dp"
         android:layout_marginEnd="105dp"
-        app:layout_constraintBottom_toTopOf="@+id/imageButton2"
+        app:layout_constraintBottom_toTopOf="@+id/controlsButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/connectpage"
-        android:clickable="true"/>
+        app:srcCompat="@drawable/connectpage"/>
 
     <ImageButton
-        android:id="@+id/imageButton2"
+        android:id="@+id/controlsButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@null"
         android:layout_marginStart="105dp"
         android:layout_marginEnd="105dp"
-        app:layout_constraintBottom_toTopOf="@+id/imageButton3"
+        app:layout_constraintBottom_toTopOf="@+id/commandsButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton"
-        app:srcCompat="@drawable/controlpage" />
+        app:layout_constraintTop_toBottomOf="@+id/connectButton"
+        app:srcCompat="@drawable/controlpage"/>
 
     <ImageButton
-        android:id="@+id/imageButton3"
+        android:id="@+id/commandsButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@null"
         android:layout_marginStart="105dp"
         android:layout_marginEnd="105dp"
-        app:layout_constraintBottom_toTopOf="@+id/imageButton4"
+        app:layout_constraintBottom_toTopOf="@+id/parametersButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton2"
-        app:srcCompat="@drawable/commandspage" />
+        app:layout_constraintTop_toBottomOf="@+id/controlsButton"
+        app:srcCompat="@drawable/commandspage"/>
 
     <ImageButton
-        android:id="@+id/imageButton4"
+        android:id="@+id/parametersButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@null"
@@ -57,6 +56,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton3"
-        app:srcCompat="@drawable/parameterspage" />
+        app:layout_constraintTop_toBottomOf="@+id/commandsButton"
+        app:srcCompat="@drawable/parameterspage"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -10,6 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Piprobot">
         <activity
+            android:name=".CommandsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ControlsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ConnectActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
