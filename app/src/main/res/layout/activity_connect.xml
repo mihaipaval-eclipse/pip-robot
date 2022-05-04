@@ -7,7 +7,7 @@
     android:background="@drawable/background">
 
     <EditText
-        android:id="@+id/editTextTextPersonName12"
+        android:id="@+id/ipid"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
         android:layout_marginTop="386dp"
@@ -24,7 +24,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName13"
+        android:id="@+id/portid"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
         android:layout_marginBottom="25dp"
@@ -40,7 +40,7 @@
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName12" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/connect"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="316dp"
