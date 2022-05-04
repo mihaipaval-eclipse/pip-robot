@@ -97,11 +97,7 @@
         android:clickable="true"/>
 
     <ImageButton
-<<<<<<< HEAD
-        android:id="@+id/up_btn"
-=======
         android:id="@+id/up_button"
->>>>>>> 07854e7eb68f3ef11cee37b3af8fbfa7e05e0abc
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="177dp"

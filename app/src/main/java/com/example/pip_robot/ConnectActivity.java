@@ -28,23 +28,20 @@ public class ConnectActivity extends AppCompatActivity {
         connect.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.println(Log.INFO,"aaa", GetIp());
-                IP=GetIp();
-                PORT= GetPort();
+                Log.println(Log.INFO,"ip", GetIP());
+                IP = GetIP();
+                PORT = GetPort();
             }
         });
     }
-
-    public String GetIp() {
-        EditText ip = (EditText) findViewById(R.id.ipid);
+    public String GetIP() {
+        EditText ip = (EditText) findViewById(R.id.ipBox);
         String message = ip.getText().toString();
         return message;
     }
-
     public int GetPort() {
-        EditText ip = (EditText) findViewById(R.id.portid);
+        EditText ip = (EditText) findViewById(R.id.portBox);
         String message = ip.getText().toString();
         return Integer.parseInt(message);
     }
-
 }

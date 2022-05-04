@@ -51,5 +51,4 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, CommandsActivity.class);
         startActivity(intent);
     }
-
 }
