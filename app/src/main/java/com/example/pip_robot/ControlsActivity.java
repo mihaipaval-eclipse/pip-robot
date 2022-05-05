@@ -23,7 +23,10 @@ public class ControlsActivity extends AppCompatActivity {
         Button art1 = (Button)findViewById(R.id.art1);
         art1.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) { replaceFragment(new art1fragment()); }
+            public void onClick(View v) {
+                replaceFragment(new art1fragment());
+                Log.println(Log.INFO,"test", "IP: " + ConnectActivity.IP + " & PORT: " + ConnectActivity.PORT);
+            }
         });
         Button art2 = (Button)findViewById(R.id.art2);
         art2.setOnClickListener(new View.OnClickListener() {
