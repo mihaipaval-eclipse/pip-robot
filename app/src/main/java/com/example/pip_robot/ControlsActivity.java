@@ -13,6 +13,12 @@ import android.widget.ImageButton;
 
 import com.google.android.material.tabs.TabItem;
 
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.net.InetAddress;
+import java.net.Socket;
+import java.net.UnknownHostException;
+
 public class ControlsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,7 +52,6 @@ public class ControlsActivity extends AppCompatActivity {
             public void onClick(View v) { replaceFragment(new art5fragment()); }
         });
     }
-
     private void replaceFragment(Fragment fragment) {
         FragmentManager fg = getSupportFragmentManager();
         FragmentTransaction ft = fg.beginTransaction();
