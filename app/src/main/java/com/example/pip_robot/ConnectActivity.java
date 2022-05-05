@@ -18,7 +18,7 @@ public class ConnectActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_connect);
         getSupportActionBar().hide();
-        // test
+        // test2
 
         Button connect = (Button)findViewById(R.id.connect);
         connect.setOnClickListener(new View.OnClickListener() {
