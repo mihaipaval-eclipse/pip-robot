@@ -7,13 +7,12 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-
+import android.widget.Toast;
 
 public class ConnectActivity extends AppCompatActivity {
 
     static String IP = null;
     static int PORT = 0;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,20 +23,18 @@ public class ConnectActivity extends AppCompatActivity {
         connect.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.println(Log.INFO,"ip", GetIP());
-                IP = GetIP();
-                PORT = GetPort();
+                // Log.println(Log.INFO,"ip", GetIP());
+                // IP = GetIP();
+                // PORT = GetPort();
             }
         });
     }
     public String GetIP() {
-        EditText ip = (EditText) findViewById(R.id.ipBox);
-        String message = ip.getText().toString();
-        return message;
+        EditText ipBox = (EditText) findViewById(R.id.ipBox);
+        return ipBox.getText().toString();
     }
     public int GetPort() {
-        EditText ip = (EditText) findViewById(R.id.portBox);
-        String message = ip.getText().toString();
-        return Integer.parseInt(message);
+        EditText portBox = (EditText) findViewById(R.id.portBox);
+        return Integer.parseInt(portBox.getText().toString());
     }
 }
