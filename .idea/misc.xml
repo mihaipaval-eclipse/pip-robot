@@ -3,8 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/AndroidStudioProjects/pip-robot/app/src/main/res/drawable/rounded_edittext.xml" value="0.1295" />
         <entry key="..\:/AndroidStudioProjects/pip-robot/app/src/main/res/layout/activity_commands.xml" value="0.25" />
-        <entry key="..\:/AndroidStudioProjects/pip-robot/app/src/main/res/layout/activity_connect.xml" value="0.17314814814814813" />
+        <entry key="..\:/AndroidStudioProjects/pip-robot/app/src/main/res/layout/activity_connect.xml" value="0.2" />
         <entry key="..\:/AndroidStudioProjects/pip-robot/app/src/main/res/layout/activity_controls.xml" value="0.2" />
         <entry key="..\:/AndroidStudioProjects/pip-robot/app/src/main/res/layout/activity_main.xml" value="0.2" />
         <entry key="..\:/AndroidStudioProjects/pip-robot/app/src/main/res/layout/connect.xml" value="0.20521590423257802" />
