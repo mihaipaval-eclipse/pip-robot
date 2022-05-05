@@ -8,7 +8,7 @@
     tools:context=".CommandsActivity">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/console_background"
         android:layout_width="380dp"
         android:layout_height="640dp"
         android:layout_marginStart="14dp"
@@ -16,27 +16,56 @@
         android:layout_marginEnd="14dp"
         android:layout_marginBottom="9dp"
         android:background="@color/black"
-        android:textColor="@color/pip"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/commandBox"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/console"
+        android:layout_width="355dp"
+        android:layout_height="615dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="14dp"
+        android:layout_marginBottom="9dp"
+        android:background="@color/black"
+        android:textColor="@color/white"
+        android:scrollbars = "vertical"
+        app:layout_constraintBottom_toTopOf="@+id/commandBox"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
     <EditText
-        android:id="@+id/editTextTextPersonName"
-        android:layout_width="380dp"
+        android:id="@+id/commandBox"
+        android:layout_width="300dp"
         android:layout_height="50dp"
         android:layout_marginStart="15dp"
-        android:layout_marginEnd="15dp"
+        android:layout_marginEnd="20dp"
         android:layout_marginBottom="16dp"
-        android:background="@color/white"
+        android:background="@drawable/rounded_edittext"
         android:ems="10"
         android:hint="Command"
         android:inputType="textPersonName"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/type"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/console" />
+
+    <Button
+        android:id="@+id/type"
+        android:layout_width="70dp"
+        android:layout_height="61dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginBottom="14dp"
+        android:backgroundTint="@color/pip"
+        android:text=">"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/commandBox"
+        app:layout_constraintTop_toBottomOf="@+id/console" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
