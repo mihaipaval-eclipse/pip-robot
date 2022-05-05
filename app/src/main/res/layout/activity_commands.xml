@@ -9,63 +9,91 @@
 
     <TextView
         android:id="@+id/console_background"
-        android:layout_width="380dp"
-        android:layout_height="640dp"
-        android:layout_marginStart="14dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="14dp"
-        android:layout_marginBottom="9dp"
+        android:layout_height="0dp"
+        android:layout_width="fill_parent"
+        android:layout_weight="1"
         android:background="@color/black"
-        app:layout_constraintBottom_toTopOf="@+id/commandBox"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintBottom_toBottomOf="@id/bottom_guideline"
+        app:layout_constraintEnd_toEndOf="@id/right_guideline"
+        app:layout_constraintStart_toEndOf="@id/left_guideline"
+        app:layout_constraintTop_toBottomOf="@+id/top_guideline" />
 
     <TextView
         android:id="@+id/console"
-        android:layout_width="355dp"
-        android:layout_height="615dp"
-        android:layout_marginStart="14dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="14dp"
-        android:layout_marginBottom="9dp"
+        android:layout_height="0dp"
+        android:layout_width="380dp"
+        android:layout_weight="1"
+        android:layout_marginTop="10dp"
         android:background="@color/black"
+        android:scrollbars="vertical"
         android:textColor="@color/white"
-        android:scrollbars = "vertical"
-        app:layout_constraintBottom_toTopOf="@+id/commandBox"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintBottom_toBottomOf="@id/bottom2_guideline"
+        app:layout_constraintEnd_toEndOf="@id/right_guideline"
+        app:layout_constraintStart_toEndOf="@id/left_guideline"
+        app:layout_constraintTop_toTopOf="@+id/top_guideline" />
 
     <EditText
         android:id="@+id/commandBox"
-        android:layout_width="300dp"
+        android:layout_width="310dp"
         android:layout_height="50dp"
-        android:layout_marginStart="15dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="16dp"
         android:background="@drawable/rounded_edittext"
         android:ems="10"
         android:hint="Command"
         android:inputType="textPersonName"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/type"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/console" />
+        app:layout_constraintEnd_toStartOf="@id/right_guideline"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/left_guideline"
+        app:layout_constraintTop_toTopOf="@id/top_guideline"
+        app:layout_constraintVertical_bias="0.97" />
 
     <Button
         android:id="@+id/type"
-        android:layout_width="70dp"
-        android:layout_height="61dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="7dp"
-        android:layout_marginBottom="14dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:backgroundTint="@color/pip"
         android:text=">"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/commandBox"
-        app:layout_constraintTop_toBottomOf="@+id/console" />
+        app:layout_constraintEnd_toEndOf="@id/right_guideline"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@id/left_guideline"
+        app:layout_constraintTop_toBottomOf="@id/top_guideline"
+        app:layout_constraintVertical_bias="0.97" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/top_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.03" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/left_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/bottom_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.88" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/bottom2_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.865" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/right_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.95" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
