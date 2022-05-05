@@ -15,7 +15,6 @@ import java.net.Socket;
 import java.net.UnknownHostException;
 
 public class ConnectActivity extends AppCompatActivity {
-
     static String IP = null;
     static int PORT = 0;
     static Socket socket = null;
@@ -43,7 +42,7 @@ public class ConnectActivity extends AppCompatActivity {
         EditText portBox = (EditText) findViewById(R.id.portBox);
         return Integer.parseInt(portBox.getText().toString());
     }
-    static public void Client(String address, int port, String command){
+    public static void Client(String address, int port, String command){
         try {
             socket = new Socket(InetAddress.getByName(address), port);
             Log.println(Log.INFO,"c_s", "Connected");
