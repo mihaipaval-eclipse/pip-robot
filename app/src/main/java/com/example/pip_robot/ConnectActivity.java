@@ -58,7 +58,7 @@ public class ConnectActivity extends AppCompatActivity {
             return;
         }
 
-        out.write(command +"\n");
+        out.write(command + "\n");
         out.flush();
 
         // close the connection
