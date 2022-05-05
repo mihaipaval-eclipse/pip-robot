@@ -6,20 +6,19 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageButton;
-
-import com.google.android.material.tabs.TabItem;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.net.InetAddress;
 import java.net.Socket;
 import java.net.UnknownHostException;
 
+import java.net.*;
+import java.io.*;
+
 public class ControlsActivity extends AppCompatActivity {
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,7 +28,11 @@ public class ControlsActivity extends AppCompatActivity {
         Button art1 = (Button)findViewById(R.id.art1);
         art1.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) { replaceFragment(new art1fragment()); }
+            public void onClick(View v) { replaceFragment(new art1fragment());
+
+                doInBackground();
+
+            }
         });
         Button art2 = (Button)findViewById(R.id.art2);
         art2.setOnClickListener(new View.OnClickListener() {
@@ -57,5 +60,29 @@ public class ControlsActivity extends AppCompatActivity {
         FragmentTransaction ft = fg.beginTransaction();
         ft.replace(R.id.flFragment, fragment);
         ft.commit();
+    }
+
+    protected String doInBackground(String... data)
+    {
+        // establish a connection
+        try {
+
+            Socket socket = new Socket("192.168.0.112", 30002); //Server IP and PORT
+
+            PrintWriter printWriter = new PrintWriter(new OutputStreamWriter(socket.getOutputStream()));
+            printWriter.write("set_digital_out(0,True )"+"\n"); // Send Data
+            printWriter.flush();
+
+            socket.close();
+            printWriter.close();
+
+        }
+        catch(UnknownHostException e){
+            System.err.println("Don't know about host: ");
+        }catch (IOException e){
+            System.err.println("Couldn't get I/O for the connection to: ");
+        }
+
+        return null;
     }
 }

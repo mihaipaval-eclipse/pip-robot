@@ -25,6 +25,9 @@ local.properties
 .loadpath
 .recommenders
 
+*.bin
+*.lock
+
 # External tool builders
 .externalToolBuilders/
 
