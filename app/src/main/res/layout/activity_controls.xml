@@ -4,112 +4,69 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ControlsActivity"
-    android:background="@drawable/background">
+    android:background="@drawable/background"
+    tools:context=".ControlsActivity">
 
-    <com.google.android.material.tabs.TabLayout
-        android:id="@+id/tabLayout3"
-        android:layout_width="409dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="667dp"
+    <Button
+        android:id="@+id/art1"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:text="1"
         android:backgroundTint="@color/pip"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/art2"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        app:tabTextColor="@color/black">
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <com.google.android.material.tabs.TabItem
-            android:id="@+id/art1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="1" />
+    <Button
+        android:id="@+id/art2"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:text="2"
+        android:backgroundTint="@color/pip"
+        app:layout_constraintEnd_toStartOf="@+id/art3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/art1"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <com.google.android.material.tabs.TabItem
-            android:id="@+id/art2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="2" />
+    <Button
+        android:id="@+id/art3"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:text="3"
+        android:backgroundTint="@color/pip"
+        app:layout_constraintEnd_toStartOf="@+id/art4"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/art2"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <com.google.android.material.tabs.TabItem
-            android:id="@+id/art3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="3" />
+    <Button
+        android:id="@+id/art4"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:text="4"
+        android:backgroundTint="@color/pip"
+        app:layout_constraintEnd_toStartOf="@+id/art5"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/art3"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <com.google.android.material.tabs.TabItem
-            android:id="@+id/art4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="4" />
-
-        <com.google.android.material.tabs.TabItem
-            android:id="@+id/art5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="5" />
-    </com.google.android.material.tabs.TabLayout>
-
-    <ImageButton
-        android:id="@+id/down_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="?attr/selectableItemBackgroundBorderless"
-        android:rotation="90"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <Button
+        android:id="@+id/art5"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:text="5"
+        android:backgroundTint="@color/pip"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.643"
-        app:srcCompat="@drawable/arrow"
-        android:clickable="true"/>
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/art4"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageButton
-        android:id="@+id/right_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="139dp"
-        android:layout_marginEnd="72dp"
-        android:background="?attr/selectableItemBackgroundBorderless"
+    <FrameLayout
+        android:id="@+id/flFragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/left_button"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.499"
-        app:srcCompat="@drawable/arrow"
-        android:clickable="true"/>
-
-    <ImageButton
-        android:id="@+id/left_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="72dp"
-        android:background="?attr/selectableItemBackgroundBorderless"
-        android:rotation="180"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/right_button"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.499"
-        app:srcCompat="@drawable/arrow"
-        android:clickable="true"/>
-
-    <ImageButton
-        android:id="@+id/up_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="177dp"
-        android:layout_marginBottom="124dp"
-        android:background="?attr/selectableItemBackgroundBorderless"
-        android:rotation="-90"
-        app:layout_constraintBottom_toTopOf="@+id/down_button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tabLayout3"
-        app:srcCompat="@drawable/arrow"
-        android:clickable="true"/>
-
+        tools:layout_editor_absoluteX="-16dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

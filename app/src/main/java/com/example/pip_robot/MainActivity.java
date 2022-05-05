@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.content.Intent;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -24,7 +25,10 @@ public class MainActivity extends AppCompatActivity {
         ImageButton controlsButton = (ImageButton)findViewById(R.id.controlsButton);
         controlsButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) { openControlsActivity(); }
+            public void onClick(View v) {
+                openControlsActivity();
+                Toast.makeText(MainActivity.this, "Press a button in order to choose a joint", Toast.LENGTH_LONG).show();
+            }
         });
         ImageButton commandsButton = (ImageButton)findViewById(R.id.commandsButton);
         commandsButton.setOnClickListener(new View.OnClickListener() {
