@@ -30,7 +30,8 @@ public class ControlsActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) { replaceFragment(new art1fragment());
 
-                doInBackground();
+                CommandSender cs = new CommandSender();
+                cs.execute("set_digital_out(0,True )");
 
             }
         });
@@ -62,27 +63,5 @@ public class ControlsActivity extends AppCompatActivity {
         ft.commit();
     }
 
-    protected String doInBackground(String... data)
-    {
-        // establish a connection
-        try {
 
-            Socket socket = new Socket("192.168.0.112", 30002); //Server IP and PORT
-
-            PrintWriter printWriter = new PrintWriter(new OutputStreamWriter(socket.getOutputStream()));
-            printWriter.write("set_digital_out(0,True )"+"\n"); // Send Data
-            printWriter.flush();
-
-            socket.close();
-            printWriter.close();
-
-        }
-        catch(UnknownHostException e){
-            System.err.println("Don't know about host: ");
-        }catch (IOException e){
-            System.err.println("Couldn't get I/O for the connection to: ");
-        }
-
-        return null;
-    }
 }
