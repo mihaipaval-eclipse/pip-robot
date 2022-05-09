@@ -29,10 +29,8 @@ public class ControlsActivity extends AppCompatActivity {
         art1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) { replaceFragment(new art1fragment());
-
                 CommandSender cs = new CommandSender();
                 cs.execute("set_digital_out(0,True )");
-
             }
         });
         Button art2 = (Button)findViewById(R.id.art2);
@@ -62,6 +60,4 @@ public class ControlsActivity extends AppCompatActivity {
         ft.replace(R.id.flFragment, fragment);
         ft.commit();
     }
-
-
 }
