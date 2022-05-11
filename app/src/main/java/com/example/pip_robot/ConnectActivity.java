@@ -3,17 +3,12 @@ package com.example.pip_robot;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageButton;
+import android.widget.Toast;
 
-import java.io.IOException;
-import java.io.PrintWriter;
-import java.net.InetAddress;
-import java.net.Socket;
-import java.net.UnknownHostException;
+import java.util.Objects;
 
 public class ConnectActivity extends AppCompatActivity {
     static String IP = null;
@@ -23,7 +18,7 @@ public class ConnectActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_connect);
-        getSupportActionBar().hide();
+        Objects.requireNonNull(getSupportActionBar()).hide();
 
         Button connect = (Button)findViewById(R.id.connect);
         connect.setOnClickListener(new View.OnClickListener() {
@@ -31,6 +26,7 @@ public class ConnectActivity extends AppCompatActivity {
             public void onClick(View v) {
                 IP = GetIP();
                 PORT = GetPort();
+                Toast.makeText(ConnectActivity.this, "Connected", Toast.LENGTH_SHORT).show();
             }
         });
     }

@@ -9,14 +9,16 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import java.util.Objects;
+
 public class CommandsActivity extends AppCompatActivity {
-    static String comanda = null;
+    static String command = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_commands);
-        getSupportActionBar().hide();
+        Objects.requireNonNull(getSupportActionBar()).hide();
 
         TextView console = (TextView) findViewById(R.id.console);
         console.setMovementMethod(new ScrollingMovementMethod());
@@ -26,18 +28,16 @@ public class CommandsActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (console.getText().toString().matches("")) {
-                    comanda = GetCommand();
-                    console.append(comanda);
+                    command = GetCommand();
+                    console.append(command);
                     CommandSender cs = new CommandSender();
-                    cs.execute(comanda);
-
+                    cs.execute(command);
                 }
                 else {
-                    comanda = GetCommand();
-                    console.append("\n" + comanda);
+                    command = GetCommand();
+                    console.append("\n" + command);
                     CommandSender cs = new CommandSender();
-                    cs.execute(comanda);
-
+                    cs.execute(command);
                 }
             }
         });

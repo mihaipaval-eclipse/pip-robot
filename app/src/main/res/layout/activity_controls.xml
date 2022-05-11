@@ -7,66 +7,23 @@
     android:background="@drawable/background"
     tools:context=".ControlsActivity">
 
-    <Button
-        android:id="@+id/art1"
-        android:layout_width="55dp"
-        android:layout_height="55dp"
-        android:text="1"
-        android:backgroundTint="@color/pip"
-        app:layout_constraintEnd_toStartOf="@+id/art2"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/art2"
-        android:layout_width="55dp"
-        android:layout_height="55dp"
-        android:text="2"
-        android:backgroundTint="@color/pip"
-        app:layout_constraintEnd_toStartOf="@+id/art3"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/art1"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/art3"
-        android:layout_width="55dp"
-        android:layout_height="55dp"
-        android:text="3"
-        android:backgroundTint="@color/pip"
-        app:layout_constraintEnd_toStartOf="@+id/art4"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/art2"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/art4"
-        android:layout_width="55dp"
-        android:layout_height="55dp"
-        android:text="4"
-        android:backgroundTint="@color/pip"
-        app:layout_constraintEnd_toStartOf="@+id/art5"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/art3"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/art5"
-        android:layout_width="55dp"
-        android:layout_height="55dp"
-        android:text="5"
-        android:backgroundTint="@color/pip"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/art4"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <FrameLayout
-        android:id="@+id/flFragment"
-        android:layout_width="match_parent"
+        android:id="@+id/frameLayout"
+        android:layout_width="0dp"
         android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </FrameLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="-16dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_nav_menu"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

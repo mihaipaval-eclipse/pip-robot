@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="TCP Position"
+        android:id="@+id/tcp_position"
+        android:icon="@drawable/ic_tcp_position"/>
+    <item android:title="TCP Orientation"
+        android:id="@+id/tcp_orientation"
+        android:icon="@drawable/ic_tcp_orientation"/>
+    <item android:title="Joint Position"
+        android:id="@+id/joint_position"
+        android:icon="@drawable/ic_joint_position"/>
+</menu>

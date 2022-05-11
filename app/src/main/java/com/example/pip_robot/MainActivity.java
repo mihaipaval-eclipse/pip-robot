@@ -8,27 +8,25 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
+import java.util.Objects;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        getSupportActionBar().hide();
+        Objects.requireNonNull(getSupportActionBar()).hide();
 
         ImageButton connectButton = (ImageButton)findViewById(R.id.connectButton);
         connectButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) { openConnectActivity(); }
         });
-
         ImageButton controlsButton = (ImageButton)findViewById(R.id.controlsButton);
         controlsButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                openControlsActivity();
-                Toast.makeText(MainActivity.this, "Press a button in order to choose a joint", Toast.LENGTH_LONG).show();
-            }
+            public void onClick(View v) { openControlsActivity(); }
         });
         ImageButton commandsButton = (ImageButton)findViewById(R.id.commandsButton);
         commandsButton.setOnClickListener(new View.OnClickListener() {

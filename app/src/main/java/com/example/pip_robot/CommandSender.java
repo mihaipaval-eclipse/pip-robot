@@ -19,7 +19,6 @@ public class CommandSender extends AsyncTask<String,Void,Void> {
         // establish a connection
         String command = data[0];
         try {
-
             socket = new Socket(ConnectActivity.IP, ConnectActivity.PORT); //Server IP and PORT
             printWriter = new PrintWriter(socket.getOutputStream());
 
@@ -28,13 +27,11 @@ public class CommandSender extends AsyncTask<String,Void,Void> {
 
             printWriter.close();
             socket.close();
-        }
-        catch(UnknownHostException e){
+        } catch(UnknownHostException e){
             System.err.println("Don't know about host: ");
-        }catch (IOException e){
+        } catch (IOException e){
             System.err.println("Couldn't get I/O for the connection to: ");
         }
-
         return null;
     }
 }
