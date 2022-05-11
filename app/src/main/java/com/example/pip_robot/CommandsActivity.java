@@ -10,6 +10,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 public class CommandsActivity extends AppCompatActivity {
+    static String comanda = null;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,10 +25,20 @@ public class CommandsActivity extends AppCompatActivity {
         type.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (console.getText().toString().matches(""))
-                    console.append(GetCommand());
-                else
-                    console.append("\n" + GetCommand());
+                if (console.getText().toString().matches("")) {
+                    comanda = GetCommand();
+                    console.append(comanda);
+                    CommandSender cs = new CommandSender();
+                    cs.execute(comanda);
+
+                }
+                else {
+                    comanda = GetCommand();
+                    console.append("\n" + comanda);
+                    CommandSender cs = new CommandSender();
+                    cs.execute(comanda);
+
+                }
             }
         });
     }

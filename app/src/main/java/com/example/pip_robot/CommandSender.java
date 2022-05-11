@@ -1,8 +1,9 @@
 package com.example.pip_robot;
 
 import android.os.AsyncTask;
-import android.util.Log;
 
+import java.io.BufferedInputStream;
+import java.io.DataInputStream;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.net.Socket;
@@ -18,19 +19,22 @@ public class CommandSender extends AsyncTask<String,Void,Void> {
         // establish a connection
         String command = data[0];
         try {
-            socket = new Socket("192.168.0.112", 30002); //Server IP and PORT
+
+            socket = new Socket(ConnectActivity.IP, ConnectActivity.PORT); //Server IP and PORT
             printWriter = new PrintWriter(socket.getOutputStream());
 
-            printWriter.write(command + "\n"); // Send Data
+            printWriter.write(command+"\n"); // Send Data
             printWriter.flush();
 
             printWriter.close();
             socket.close();
-        } catch(UnknownHostException e){
-            Log.println(Log.INFO, "uhe", "Don't know about host");
-        } catch (IOException e){
-            Log.println(Log.INFO,"ioe","Couldn't get I/O for the connection");
         }
+        catch(UnknownHostException e){
+            System.err.println("Don't know about host: ");
+        }catch (IOException e){
+            System.err.println("Couldn't get I/O for the connection to: ");
+        }
+
         return null;
     }
 }
