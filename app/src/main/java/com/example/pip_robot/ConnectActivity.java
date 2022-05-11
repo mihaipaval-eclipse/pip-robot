@@ -25,15 +25,12 @@ public class ConnectActivity extends AppCompatActivity {
         setContentView(R.layout.activity_connect);
         getSupportActionBar().hide();
 
-
-
         Button connect = (Button)findViewById(R.id.connect);
         connect.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 IP = GetIP();
                 PORT = GetPort();
-
             }
         });
     }
