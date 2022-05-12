@@ -1,16 +1,101 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".TCP_Orientation_fragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <ImageButton
+        android:id="@+id/tcp_or_down"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TCP Orientation"
-        android:textSize="30sp"
-        android:layout_centerInParent="true"/>
+        android:layout_marginStart="141dp"
+        android:layout_marginTop="125dp"
+        android:layout_marginEnd="142dp"
+        android:layout_marginBottom="109dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:src="@drawable/arrow"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tcp_or_up" />
 
-</RelativeLayout>
+    <ImageButton
+        android:id="@+id/tcp_or_curved_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="123dp"
+        android:layout_marginTop="110dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="493dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:rotation="-45"
+        android:src="@drawable/curved_arrow"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tcp_or_curved_left"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/tcp_or_curved_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="113dp"
+        android:layout_marginBottom="490dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:rotation="135"
+        android:rotationX="-180"
+        android:src="@drawable/curved_arrow"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tcp_or_curved_right"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/tcp_or_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="369dp"
+        android:layout_marginEnd="14dp"
+        android:layout_marginBottom="234dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:rotation="-90"
+        android:src="@drawable/arrow"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tcp_or_left"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/tcp_or_up"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="141dp"
+        android:layout_marginTop="241dp"
+        android:layout_marginEnd="142dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:rotation="-180"
+        android:src="@drawable/arrow"
+        app:layout_constraintBottom_toTopOf="@+id/tcp_or_down"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/tcp_or_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="369dp"
+        android:layout_marginEnd="128dp"
+        android:layout_marginBottom="234dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:rotation="90"
+        android:src="@drawable/arrow"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tcp_or_right"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

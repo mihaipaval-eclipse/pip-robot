@@ -1,16 +1,407 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Joint_Pos_fragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <ImageButton
+        android:id="@+id/elbow_right"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Joint Position"
-        android:textSize="30sp"
-        android:layout_centerInParent="true"/>
+        android:layout_marginEnd="60dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:src="@drawable/small_arrow"
+        app:layout_constraintBottom_toTopOf="@+id/pB3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/nD3" />
 
-</RelativeLayout>
+    <ImageButton
+        android:id="@+id/shoulder_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="60dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:src="@drawable/small_arrow"
+        app:layout_constraintBottom_toTopOf="@+id/pB2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/nD2" />
+
+    <ImageButton
+        android:id="@+id/base_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:src="@drawable/small_arrow"
+        app:layout_constraintBottom_toTopOf="@+id/pB1"
+        app:layout_constraintEnd_toEndOf="@+id/pB1" />
+
+    <ImageButton
+        android:id="@+id/base_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="56dp"
+        android:layout_marginEnd="108dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:rotation="-180"
+        android:src="@drawable/small_arrow"
+        app:layout_constraintBottom_toTopOf="@+id/pB1"
+        app:layout_constraintEnd_toStartOf="@+id/nD1"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/shoulder_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:rotation="-180"
+        android:src="@drawable/small_arrow"
+        app:layout_constraintBottom_toTopOf="@+id/pB2"
+        app:layout_constraintStart_toStartOf="@+id/pB2" />
+
+    <ImageButton
+        android:id="@+id/elbow_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:rotation="-180"
+        android:src="@drawable/small_arrow"
+        app:layout_constraintBottom_toTopOf="@+id/pB3"
+        app:layout_constraintStart_toStartOf="@+id/pB3" />
+
+    <ImageButton
+        android:id="@+id/wrist1_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:rotation="-180"
+        android:src="@drawable/small_arrow"
+        app:layout_constraintBottom_toTopOf="@+id/pB4"
+        app:layout_constraintStart_toStartOf="@+id/pB4" />
+
+    <ImageButton
+        android:id="@+id/wrist2_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:rotation="-180"
+        android:src="@drawable/small_arrow"
+        app:layout_constraintBottom_toTopOf="@+id/pB5"
+        app:layout_constraintStart_toStartOf="@+id/pB5" />
+
+    <ImageButton
+        android:id="@+id/wrist3_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:rotation="-180"
+        android:src="@drawable/small_arrow"
+        app:layout_constraintBottom_toTopOf="@+id/pB6"
+        app:layout_constraintStart_toStartOf="@+id/pB6" />
+
+    <ImageButton
+        android:id="@+id/wrist3_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="60dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:src="@drawable/small_arrow"
+        app:layout_constraintBottom_toTopOf="@+id/pB6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/nD6" />
+
+    <ImageButton
+        android:id="@+id/wrist1_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="60dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:src="@drawable/small_arrow"
+        app:layout_constraintBottom_toTopOf="@+id/pB4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/nD4" />
+
+    <ImageButton
+        android:id="@+id/wrist2_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="60dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:src="@drawable/small_arrow"
+        app:layout_constraintBottom_toTopOf="@+id/pB5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/nD5" />
+
+    <ProgressBar
+        android:id="@+id/pB1"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="290dp"
+        android:layout_height="wrap_content"
+        android:progressTint="@color/black"
+        android:max="363"
+        android:min="-363"
+        android:progress="-363"
+        android:secondaryProgress="363"
+        android:secondaryProgressTint="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/pB2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/pB3"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="290dp"
+        android:layout_height="wrap_content"
+        android:progressTint="@color/black"
+        android:max="363"
+        android:min="-363"
+        android:progress="-363"
+        android:secondaryProgress="363"
+        android:secondaryProgressTint="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/pB4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pB2" />
+
+    <ProgressBar
+        android:id="@+id/pB2"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="290dp"
+        android:layout_height="wrap_content"
+        android:progressTint="@color/black"
+        android:max="363"
+        android:min="-363"
+        android:progress="-363"
+        android:secondaryProgress="363"
+        android:secondaryProgressTint="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/pB3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pB1" />
+
+    <ProgressBar
+        android:id="@+id/pB5"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="290dp"
+        android:layout_height="wrap_content"
+        android:progressTint="@color/black"
+        android:max="363"
+        android:min="-363"
+        android:progress="-363"
+        android:secondaryProgress="363"
+        android:secondaryProgressTint="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/pB6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pB4" />
+
+    <ProgressBar
+        android:id="@+id/pB4"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="290dp"
+        android:layout_height="wrap_content"
+        android:progressTint="@color/black"
+        android:max="363"
+        android:min="-363"
+        android:progress="-363"
+        android:secondaryProgress="363"
+        android:secondaryProgressTint="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/pB5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pB3" />
+
+    <ProgressBar
+        android:id="@+id/pB6"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="290dp"
+        android:layout_height="wrap_content"
+        android:progressTint="@color/black"
+        android:max="363"
+        android:min="-363"
+        android:progress="-363"
+        android:secondaryProgress="363"
+        android:secondaryProgressTint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pB5" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="55dp"
+        android:layout_marginEnd="223dp"
+        android:layout_marginBottom="71dp"
+        android:text="Base"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/base_left"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="111dp"
+        android:layout_marginEnd="113dp"
+        android:layout_marginBottom="70dp"
+        android:text="Shoulder"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textView3"
+        app:layout_constraintEnd_toStartOf="@+id/shoulder_right"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="111dp"
+        android:layout_marginEnd="113dp"
+        android:layout_marginBottom="64dp"
+        android:text="Elbow"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textView4"
+        app:layout_constraintEnd_toStartOf="@+id/elbow_right"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="111dp"
+        android:layout_marginEnd="113dp"
+        android:layout_marginBottom="78dp"
+        android:text="Wrist 1"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textView5"
+        app:layout_constraintEnd_toStartOf="@+id/wrist1_right"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="111dp"
+        android:layout_marginEnd="113dp"
+        android:layout_marginBottom="71dp"
+        android:text="Wrist 2"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textView6"
+        app:layout_constraintEnd_toStartOf="@+id/wrist2_right"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="111dp"
+        android:layout_marginEnd="113dp"
+        android:layout_marginBottom="106dp"
+        android:text="Wrist 3"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/wrist3_right"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+    <EditText
+        android:id="@+id/nD2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="214dp"
+        android:layout_marginBottom="56dp"
+        android:ems="10"
+        android:inputType="numberDecimal|numberSigned"
+        app:layout_constraintBottom_toTopOf="@+id/nD3"
+        app:layout_constraintEnd_toStartOf="@+id/shoulder_right"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nD1" />
+
+    <EditText
+        android:id="@+id/nD3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="214dp"
+        android:layout_marginBottom="57dp"
+        android:ems="10"
+        android:inputType="numberDecimal|numberSigned"
+        app:layout_constraintBottom_toTopOf="@+id/nD4"
+        app:layout_constraintEnd_toStartOf="@+id/elbow_right"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nD2" />
+
+    <EditText
+        android:id="@+id/nD4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="214dp"
+        android:layout_marginBottom="57dp"
+        android:ems="10"
+        android:inputType="numberDecimal|numberSigned"
+        app:layout_constraintBottom_toTopOf="@+id/nD5"
+        app:layout_constraintEnd_toStartOf="@+id/wrist1_right"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nD3" />
+
+    <EditText
+        android:id="@+id/nD5"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="214dp"
+        android:layout_marginBottom="57dp"
+        android:ems="10"
+        android:inputType="numberDecimal|numberSigned"
+        app:layout_constraintBottom_toTopOf="@+id/nD6"
+        app:layout_constraintEnd_toStartOf="@+id/wrist2_right"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nD4" />
+
+    <EditText
+        android:id="@+id/nD6"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="214dp"
+        android:layout_marginBottom="106dp"
+        android:ems="10"
+        android:inputType="numberDecimal|numberSigned"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/wrist3_right"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nD5" />
+
+    <EditText
+        android:id="@+id/nD1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="41dp"
+        android:layout_marginEnd="110dp"
+        android:layout_marginBottom="57dp"
+        android:ems="10"
+        android:inputType="numberDecimal|numberSigned"
+        app:layout_constraintBottom_toTopOf="@+id/nD2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/base_left"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
