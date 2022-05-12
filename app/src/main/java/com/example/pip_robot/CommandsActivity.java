@@ -1,5 +1,6 @@
 package com.example.pip_robot;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
@@ -9,10 +10,13 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import org.w3c.dom.Text;
+
 import java.util.Objects;
 
 public class CommandsActivity extends AppCompatActivity {
     static String command = null;
+    TextView console;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,7 +24,7 @@ public class CommandsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_commands);
         Objects.requireNonNull(getSupportActionBar()).hide();
 
-        TextView console = (TextView) findViewById(R.id.console);
+        console = (TextView) findViewById(R.id.console);
         console.setMovementMethod(new ScrollingMovementMethod());
 
         Button type = (Button) findViewById(R.id.type);
@@ -46,4 +50,16 @@ public class CommandsActivity extends AppCompatActivity {
         EditText commandBox = (EditText) findViewById(R.id.commandBox);
         return commandBox.getText().toString();
     }
+    /*@Override
+    public void onSaveInstanceState(@NonNull Bundle savedInstanceState) {
+        super.onSaveInstanceState(savedInstanceState);
+        savedInstanceState.putString("console", console.getText().toString());
+    }
+
+    @Override
+    protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+         String text = savedInstanceState.getString("console", null);
+         console.append(text);
+    }*/
 }
