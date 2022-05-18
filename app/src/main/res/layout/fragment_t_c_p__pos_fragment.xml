@@ -7,9 +7,10 @@
     tools:context=".TCP_Pos_fragment">
 
     <ImageButton
-        android:id="@+id/imageButton6"
+        android:id="@+id/tcp_pos_down"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="123dp"
         android:layout_marginTop="152dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="484dp"
@@ -17,11 +18,12 @@
         android:src="@drawable/arrow"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tcp_pos_up"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.484" />
 
     <ImageButton
-        android:id="@+id/imageButton5"
+        android:id="@+id/tcp_pos_up"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -31,12 +33,13 @@
         android:rotation="-180"
         android:src="@drawable/arrow"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tcp_pos_down"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.484" />
 
     <ImageButton
-        android:id="@+id/imageButton3"
+        android:id="@+id/tcp_pos_right_45"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="366dp"
@@ -48,11 +51,12 @@
         android:src="@drawable/arrow"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tcp_pos_up_45"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
 
     <ImageButton
-        android:id="@+id/imageButton4"
+        android:id="@+id/tcp_pos_left_45"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -63,12 +67,13 @@
         android:rotationX="65"
         android:src="@drawable/arrow"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tcp_pos_up_45"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
 
     <ImageButton
-        android:id="@+id/imageButton2"
+        android:id="@+id/tcp_pos_up_45"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="268dp"
@@ -77,13 +82,13 @@
         android:rotation="-180"
         android:rotationX="65"
         android:src="@drawable/arrow"
-        app:layout_constraintBottom_toTopOf="@+id/imageButton"
+        app:layout_constraintBottom_toTopOf="@+id/tcp_pos_down_45"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
-        android:id="@+id/imageButton"
+        android:id="@+id/tcp_pos_down_45"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="152dp"
@@ -91,8 +96,9 @@
         android:rotationX="65"
         android:src="@drawable/arrow"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/imageButton2"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton2" />
+        app:layout_constraintEnd_toStartOf="@+id/tcp_pos_right_45"
+        app:layout_constraintStart_toStartOf="@+id/tcp_pos_up_45"
+        app:layout_constraintTop_toBottomOf="@+id/tcp_pos_up_45" />
 
     <Button
         android:id="@+id/pos_home"
@@ -107,7 +113,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton"
+        app:layout_constraintTop_toBottomOf="@+id/tcp_pos_down_45"
         app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
